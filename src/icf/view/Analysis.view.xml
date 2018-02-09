@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="sap.demo.icf.controller.Analysis"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        id="view-analysis"
+        title="{i18n>analysisTitle}"
+        class="page-analysis"
+        showNavButton="true"
+        navButtonPress="onNavButtonPressed">
+        <!--<core:HTML id="iframe-container" /> -->
+        <html:iframe
+            src="http://preview.agnet.com.cn/#/"
+            target="top"
+            width="100%"
+            class="analysis-iframe">
+            Access chrome://settings/content/cookies and turn off "Block third-party cookies" !
+        </html:iframe>
+    </Page>
+</mvc:View>

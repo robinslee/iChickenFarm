@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="sap.demo.icf.controller.Prediction"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>predictionTitle}"
+        class="page-prediction"
+        showNavButton="true"
+        navButtonPress="onNavButtonPressed">
+    </Page>
+</mvc:View>

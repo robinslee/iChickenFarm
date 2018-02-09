@@ -1,0 +1,24 @@
+{
+  "name": "intelligent-chicken-farm",
+  "version": "1.0.0",
+  "description": "Intelligent Chicken Farm",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm install --no-optional && node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinslee/iChickenFarm.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinslee/iChickenFarm/issues"
+  },
+  "homepage": "https://github.com/robinslee/iChickenFarm#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-logger": "^3.1.0",
+    "koa-static": "^4.0.2"
+  }
+}

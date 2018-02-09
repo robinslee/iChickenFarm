@@ -35,6 +35,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+src/1.52.4-rt/
+src/1.52.4-sdk/
 
 # Typescript v1 declaration files
 typings/

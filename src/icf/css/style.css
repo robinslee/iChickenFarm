@@ -1,0 +1,73 @@
+html[dir="ltr"] .icf-demo {
+    --background-color: #ccc;
+}
+
+html[dir="rtl"] .icf-demo {
+    --background-color: #ccc;
+}
+
+html[dir="ltr"] .icf-demo .page-overview .tileLayout {
+    float: left;
+    /* #FDFDFD */
+    background: linear-gradient(to bottom, #ede9e9, #ccc);
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    box-shadow: .2rem .2rem .5rem #aaa;
+    border-radius: .5rem;
+}
+
+html[dir="ltr"] .icf-demo .page-overview .tileLayout:hover .sapUiIcon {
+    transform: translateX(-1rem);
+}
+
+html[dir="ltr"] .icf-demo .page-overview .tileLayout .sapMNCIconImage.sapUiIcon {
+    right: .8rem;
+}
+
+html[dir="ltr"] .icf-demo .page-overview .tileLayout .sapUiIcon {
+    font-size: 2.5rem;
+    color: #346187;
+    transition: transform .2s ease-out;
+}
+
+html[dir="ltr"] .icf-demo .page-overview .sapFAvatar {
+    vertical-align: middle;
+}
+
+html[dir="ltr"] .icf-demo .page-overview .sapMBarLeft,
+html[dir="ltr"] .icf-demo .page-overview .sapMBarPH {
+    padding-left: .5rem;
+}
+
+html[dir="ltr"] .icf-demo .overview-board {
+    border-radius: .2rem;
+    box-shadow: .1rem .1rem .1rem #ddd;
+    border: 1px solid #ddd;
+    border-left: 1rem solid #ddd;
+}
+
+html[dir="ltr"] .icf-demo .overview-board .board-smallchart .sapMTileCntContent {
+    text-align: right;
+}
+
+html[dir="ltr"] .icf-demo .page-analysis {
+    -height: calc(100% - 3rem);
+}
+
+html[dir="ltr"] .icf-demo .page-analysis .analysis-iframe {
+    position: absolute;
+    bottom: 0px;
+    border: none;
+    height: 100%;
+}
+
+@keyframes Opacity-blink {
+    0% { opacity: 1; }
+    50% { opacity: .2; }
+    100% { opacity: 1; }
+}
+
+html[dir="ltr"] .icf-demo .page-overview .tileLayout .sapMNCInner {
+    animation: Opacity-blink .5s infinite;
+}

@@ -1,0 +1,135 @@
+<mvc:View
+    controllerName="sap.demo.icf.controller.Overview"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.f"
+    xmlns:microchart="sap.suite.ui.microchart">
+
+    <Page title="{i18n>homeTitle}" class="page-overview">
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <f:Avatar
+                        src="./css/images/Woman_avatar_02.png"
+                        displaySize="XS"
+                        displayShape="Circle" />
+                </contentLeft>
+                <contentMiddle>
+                    <Title level="H3" text="{i18n>homeTitle}" />
+                </contentMiddle>
+                <contentRight>
+                    <Button icon="sap-icon://ui-notifications" />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <!--
+        <headerContent>
+            <Button icon="sap-icon://hello-world" />
+        </headerContent>
+        -->
+        <content>
+            <Panel width="auto">
+                <content>
+                    <FlexBox class="overview-board sapUiSmallMargin">
+                        <items>
+                            <TileContent footer="Current Quarter" unit="EUR" class="sapUiTinyMargin">
+                                <content>
+                                    <NumericContent
+                                        scale="M"
+                                        value="1.96"
+                                        valueColor="Error"
+                                        indicator="Up" />
+                                </content>
+                            </TileContent>
+                            <TileContent class="board-smallchart sapUiTinyMargin" footer="Percentage Value" size="S" unit="">
+                                <content>
+                                    <microchart:RadialMicroChart size="S" percentage="45" press="press" class=""></microchart:RadialMicroChart>
+                                    <!--
+                                    <microchart:RadialMicroChart size="S" percentage="0.1" valueColor="Critical" press="" class="sapUiSmallMargin"></microchart:RadialMicroChart>
+                                    <NumericContent value="3"
+                                        icon="sap-icon://travel-expense" />
+                                        -->
+                                </content>
+                            </TileContent>
+                            <TileContent footer="Hours after Activity" class="sapUiTinyMargin">
+                                <content>
+                                    <NumericContent value="9" icon="sap-icon://locked" />
+                                </content>
+                            </TileContent>
+                            <TileContent footer="New Notifications" class="sapUiTinyMargin">
+                                <content>
+                                    <FeedContent contentText="@notify Great outcome of the Presentation today." subheader="about 1 minute ago in Computer Market" value="132" />
+                                </content>
+                            </TileContent>
+                        </items>
+                    </FlexBox>
+                </content>
+            </Panel>
+            <layout:VerticalLayout class="sapUiResponsiveMargin">
+                <Title
+                    titleStyle="H2"
+                    text="{i18n>tileGroupTitle}"
+                    class="sapUiTinyMarginBegin" />
+                <layout:HorizontalLayout allowWrapping="true">
+                    <GenericTile
+                        class="sapUiTinyMarginBegin sapUiSmallMarginTop sapUiSmallMarginEnd tileLayout"
+                        header="{i18n>emHeader}"
+                        subheader="{i18n>emSubheader}"
+                        press="onNavToEnvMonitor">
+                        <TileContent unit="{i18n>emUnit}" footer="{i18n>emFooter}" footerColor="Critical">
+                            <!-- sap-icon://web-cam -->
+                            <NumericContent scale="" value="E02" valueColor="Critical" indicator="" icon="sap-icon://web-cam" />
+                            <!-- <microchart:RadialMicroChart size="S" percentage="0.1" valueColor="Critical" press="" class="sapUiSmallMargin"></microchart:RadialMicroChart>-->
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile
+                        class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginEnd tileLayout"
+                        header="{i18n>vdHeader}"
+                        subheader="{i18n>vdSubheader}"
+                        press="onNavToVoiceDetection">
+                        <TileContent unit="{i18n>vdUnit}" footer="{i18n>vdFooter}" footerColor="Good">
+                            <ImageContent src="sap-icon://sound-loud" />
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile
+                        class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginEnd tileLayout"
+                        header="{i18n>vdoHeader}"
+                        subheader="{i18n>vdoSubheader}"
+                        press="onNavToVideoDetection">
+                        <TileContent unit="{i18n>vdoUnit}" footer="{i18n>vdoFooter}" footerColor="Good">
+                            <ImageContent src="sap-icon://video" />
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile
+                        class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginEnd tileLayout"
+                        header="{i18n>analysisHeader}"
+                        subheader="{i18n>analysisSubheader}"
+                        press="onNavToAnalysis">
+                        <TileContent unit="{i18n>analysisUnit}" footer="{i18n>analysisFooter}" footerColor="Neutral">
+                            <ImageContent src="sap-icon://business-objects-experience" />
+                        </TileContent>
+                    </GenericTile>
+                    <GenericTile
+                        class="sapUiSmallMarginBegin sapUiSmallMarginTop sapUiSmallMarginEnd tileLayout"
+                        header="{i18n>predictionHeader}"
+                        subheader="{i18n>predictionSubheader}"
+                        press="onNavToPrediction">
+                        <TileContent unit="{i18n>predictionUnit}" footer="{i18n>predictionFooter}" footerColor="Neutral">
+                            <ImageContent src="sap-icon://tools-opportunity" />
+                        </TileContent>
+                    </GenericTile>
+                </layout:HorizontalLayout>
+            </layout:VerticalLayout>
+        </content>
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button
+                        icon="sap-icon://sap-logo-shape"
+                        text="{i18n>footerLogo}" />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

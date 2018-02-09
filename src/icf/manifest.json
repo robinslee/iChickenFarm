@@ -1,0 +1,162 @@
+{
+    "_version": "1.1.0",
+
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "sap.demo.icf",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{title}}",
+        "description": "{{appDescription}}",
+        "ach": "ach"
+    },
+
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_hcw",
+            "sap_belize"
+        ]
+    },
+
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "rootView": {
+            "viewName": "sap.demo.icf.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "icf-app"
+        },
+        "dependencies": {
+            "minUI5Version": "1.50.0",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {},
+                "sap.suite.ui.commons": {},
+                "sap.suite.ui.microchart": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.demo.icf.i18n.i18n"
+                }
+            },
+            "uiModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/data/uiModel.json"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "sap.demo.icf.view",
+                "controlId": "icf-app",
+                "controlAggregation": "pages",
+                "async": true,
+                "transition": "slide",
+                "bypassed": {
+                    "target": [
+                        "overview"
+                    ]
+                }
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "envMonitor",
+                    "name": "envMonitor",
+                    "target": "envMonitor"
+                },
+                {
+                    "pattern": "voiceDetection",
+                    "name": "voiceDetection",
+                    "target": "voiceDetection"
+                },
+                {
+                    "pattern": "videoDetection",
+                    "name": "videoDetection",
+                    "target": "videoDetection"
+                },
+                {
+                    "pattern": "analysis",
+                    "name": "analysis",
+                    "target": "analysis"
+                },
+                {
+                    "pattern": "prediction",
+                    "name": "prediction",
+                    "target": "prediction"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewName": "Overview",
+                    "viewLevel": 0,
+                    "viewId": "overview"
+                },
+                "envMonitor": {
+                    "viewName": "EnvMonitor",
+                    "viewLevel": 1,
+                    "viewId": "envMonitor"
+                },
+                "voiceDetection": {
+                    "viewName": "VoiceDetection",
+                    "viewLevel": 1,
+                    "viewId": "voiceDetection"
+                },
+                "videoDetection": {
+                    "viewName": "VideoDetection",
+                    "viewLevel": 1,
+                    "viewId": "videoDetection"
+                },
+                "analysis": {
+                    "viewName": "Analysis",
+                    "viewLevel": 1,
+                    "viewId": "analysis"
+                },
+                "prediction": {
+                    "viewName": "Prediction",
+                    "viewLevel": 1,
+                    "viewId": "prediction"
+                }
+            }
+        }
+    }
+}

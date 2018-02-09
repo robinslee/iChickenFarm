@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="sap.demo.icf.controller.EnvMonitor"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>envMonitorTitle}"
+        class="page-envMonitor"
+        showNavButton="true"
+        navButtonPress="onNavButtonPressed">
+    </Page>
+</mvc:View>
